@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <service uuid="1800">
+	    <description>Generic Access Profile</description>
+		
+		<characteristic uuid="2a00">
+			<properties read="true" const="true" />
+			<value>BGDemo sensor</value>
+		</characteristic>
+		
+		<characteristic uuid="2a01">
+			<properties read="true" const="true" />
+			<value type="hex">4142</value>
+		</characteristic>
+	</service>
+	
+	<service uuid="180A">
+	    <description>Device ID Service</description>
+		
+		<characteristic uuid="2a29">
+			<properties read="true" const="true" />
+			<value>Bluegiga</value>
+		</characteristic>
+		
+		<characteristic uuid="2a24">
+			<properties read="true" const="true" />
+			<value>BLE11x</value>
+		</characteristic>
+		
+		<characteristic uuid="2a25" id="xgatt_dis_2a25">
+			<properties read="true" />
+			<value type="hex" length="6" />
+		</characteristic>
+	</service>
+	
+	<service uuid="31173334-d9ff-42bb-88d3-865374cb768f" advertise="true">
+      <description>Bluegiga demo service</description>
+	  <characteristic uuid="b58376f8-ea1e-4017-80c5-c17a95c57a30">
+			<properties read="true" write="true" />
+			<value type="hex">coffee</value>
+		</characteristic>
+	</service>
+	
+</configuration>
